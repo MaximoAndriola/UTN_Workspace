@@ -1,0 +1,88 @@
+{
+  "tienda": {
+    "nombre": "ElectroStore",
+    "ubicacion": "Centro Comercial Sur",
+    "productos": [
+      {
+        "tipo": "DispositivoMovil",
+        "nombre": "Smartphone X100",
+        "marca": "TechCorp",
+        "precio": 799.99,
+        "cantidadDisponible": 150,
+        "seccionTienda": "Móviles",
+        "especificaciones": [
+          {
+            "nombre": "Pantalla",
+            "valor": "6.5 pulgadas"
+          },
+          {
+            "nombre": "Batería",
+            "valor": "4000mAh"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Caja de cartón",
+            "resistencia": "Alta",
+            "dimensiones": "15x10x5cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Portatil",
+        "nombre": "Laptop Pro Z",
+        "marca": "ByteMachines",
+        "precio": 1299.99,
+        "cantidadDisponible": 80,
+        "seccionTienda": "Computadoras",
+        "especificaciones": [
+          {
+            "nombre": "Procesador",
+            "valor": "Intel i7"
+          },
+          {
+            "nombre": "RAM",
+            "valor": "16GB"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Caja de cartón",
+            "resistencia": "Alta",
+            "dimensiones": "40x30x10cm"
+          },
+          {
+            "tipo": "Maletín",
+            "resistencia": "Media",
+            "dimensiones": "45x35x12cm"
+          }
+        ]
+      },
+      {
+        "tipo": "Accesorio",
+        "nombre": "Teclado Mecánico",
+        "marca": "ClickyKeys",
+        "precio": 99.99,
+        "cantidadDisponible": 500,
+        "seccionTienda": "Accesorios",
+        "especificaciones": [
+          {
+            "nombre": "Tipo de Tecla",
+            "valor": "Mecánico"
+          },
+          {
+            "nombre": "Retroiluminación",
+            "valor": "RGB"
+          }
+        ],
+        "embalajesDisponibles": [
+          {
+            "tipo": "Caja de plástico",
+            "resistencia": "Media",
+            "dimensiones": "35x15x5cm"
+          }
+        ]
+      }
+    ]
+  }
+}

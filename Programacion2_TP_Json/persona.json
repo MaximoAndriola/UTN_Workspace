@@ -1,0 +1,15 @@
+{
+  "last": {
+    "genero": "Masculino",
+    "nombre": "Maxi",
+    "edad": 19,
+    "dni": "12333123"
+  },
+  "first": {
+    "genero": "Masculino",
+    "nombre": "Juan",
+    "edad": 21,
+    "dni": "46420271"
+  },
+  "empty": false
+}
