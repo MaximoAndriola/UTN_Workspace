@@ -1,8 +1,5 @@
 package model;
 
-import java.time.LocalDate;
-import java.util.Currency;
-
 public class Application extends Payment{
     private AppNames appName;
     private int userId;
@@ -13,9 +10,17 @@ public class Application extends Payment{
         this.userId = userId;
     }
 
+    public Application(){
+
+    }
+
     @Override
     public boolean validateFounds(Double payment) {
-        return false;
+        boolean validate = false;
+
+
+
+        return validate;
     }
 
     @Override

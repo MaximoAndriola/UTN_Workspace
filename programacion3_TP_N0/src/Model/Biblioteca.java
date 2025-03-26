@@ -2,10 +2,11 @@ package Model;
 
 import Enums.Genero;
 import Exeptions.IdentificadorDuplicadoException;
+import Interfaces.I_Biblioteca;
 
 import java.util.*;
 
-public class Biblioteca<T extends Media> {
+public class Biblioteca<T extends Media> implements I_Biblioteca <T> {
     protected List<T> biblioteca = new ArrayList<T>();
 
     public Biblioteca() {
