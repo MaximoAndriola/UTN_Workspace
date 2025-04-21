@@ -4,20 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexionMySQL {
-    private static final String URL = "jdbc:mysql://localhost:3306/alumnos";
+public class DBConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/banco";
     private static final String USUARIO = "root";
     private static final String PASSWORD = "1234";
 
-    private static ConexionMySQL instance;
-    private static Connection conexion;
+    private static DBConnection instance;
+    private static Connection connection;
 
     // Constructor privado para evitar instanciación externa
-    private ConexionMySQL() {
+    private DBConnection() {
         try {
             // Cargar el driver de MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
+            connection = DriverManager.getConnection(URL, USUARIO, PASSWORD);
             System.out.println("Conexión exitosa a la base de datos.");
         } catch (ClassNotFoundException e) {
             System.err.println("Error: No se encontró el driver de MySQL.");
@@ -29,23 +29,23 @@ public class ConexionMySQL {
     }
 
     // Método estático para obtener la única instancia de la conexión
-    public static ConexionMySQL getInstance() {
+    public static DBConnection getInstance() {
         if (instance == null) {
-            instance = new ConexionMySQL();
+            instance = new DBConnection();
         }
         return instance;
     }
 
     // Obtener la conexión
     public Connection getConexion() {
-        return conexion;
+        return connection;
     }
 
     // Cerrar la conexión
     public static void cerrarConexion() {
-        if (conexion != null) {
+        if (connection != null) {
             try {
-                conexion.close();
+                connection.close();
                 System.out.println("Conexión cerrada correctamente.");
             } catch (SQLException e) {
                 System.err.println("Error al cerrar la conexión.");

@@ -15,7 +15,7 @@ public class Main {
         Libro libro = new Libro();
         int opcion;
         String control;
-
+        
         System.out.println("1- Agregar un nuevo libro al inventario.\n" +
                 "2- Eliminar un libro del inventario.\n" +
                 "3- Mostrar todos los libros en el inventario.\n" +
