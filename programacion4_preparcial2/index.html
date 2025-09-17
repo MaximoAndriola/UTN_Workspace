@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dioses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dioses</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Buscar Dios por ID</h2>
+            <form id="buscar-form">
+                <input type="number" id="buscar" name="buscar" required placeholder="Ingrese ID del dios" min="1">
+                <button type="submit">Buscar</button>
+            </form>
+            <ul id="dios-encontrado">
+                <!-- Aquí se mostrará el dios encontrado -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Agregar Nuevo Dios</h2>
+            <form id="add-dios-form">
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                <br>
+                <input type="text" id="dominio" name="dominio" required placeholder="dominio">
+                <br>
+                <input type="text" id="simbolo" name="simbolo" required placeholder="simbolo">
+                <br>
+                <input type="text" id="poder" name="poder" required placeholder="poder">
+                <br>
+                <input type="text" id="ciudad" name="ciudad" required placeholder="ciudad">
+                <br>
+
+                <button type="submit">Agregar Dios</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Dioses</h2>
+            <ul id="dioses-list">
+
+            </ul>
+        </section>
+
+        <script src="script.js"></script>
+    </main>
+
+    <footer>
+        <p>since 2025 Base de datos de Dioses.</p>
+    </footer>
+
+</body>
+</html>
