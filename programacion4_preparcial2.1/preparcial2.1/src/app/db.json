@@ -1,0 +1,14 @@
+{
+    "movieList":[
+        {
+            "id": 1,
+            "name": "Shreek",
+            "year": 2004
+        },
+        {
+            "id": 2,
+            "name": "Interestelar",
+            "year": 2017
+        }
+    ]
+}
