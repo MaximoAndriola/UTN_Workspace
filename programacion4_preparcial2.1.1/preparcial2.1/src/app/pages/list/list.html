@@ -1,0 +1,12 @@
+<ul>
+    @for (movie of movieService.movies; track $index){
+        <li>
+            <a [routerLink]="[movie.id]">
+                <h3> {{movie.name}}</h3>
+            </a>
+            <button (click)="showDetails(movie)">Detalle</button>
+            <button (click)="updateMovie(movie)">Editar</button>
+            <button (click)="deleteMovie(movie.id)">Eliminar</button>
+        </li>
+    }
+</ul>

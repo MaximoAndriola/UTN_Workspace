@@ -1,0 +1,16 @@
+@if(selectedMovie){
+    <div>
+        <h3>
+            id: {{selectedMovie.id}}
+        </h3>
+        <h3>
+            nombre: {{selectedMovie.name}}
+        </h3>
+        <h3>
+            anio: {{selectedMovie.year}}
+        </h3>
+        
+    </div>
+} @else {
+    <h3>No se encontro pelicula con esa id</h3>
+}

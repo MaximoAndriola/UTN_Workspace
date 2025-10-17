@@ -1,0 +1,23 @@
+<form [formGroup]="movieForm" (ngSubmit)="postMovie()">
+
+    <fieldset>
+        <label for="product-name">Nombre</label>
+        <input type="text" id="product-name" formControlName="name">
+        @if(name.invalid && name.touched){
+            <p class?="error">El nombre es obligatorio</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label for="product-year">Anio</label>
+        <input type="date" id="product-year" formControlName="year">
+        @if(year.hasError('required') && year.touched){
+            <p class?="error">El anio es obligatorio</p>
+        }
+        @else if(year.hasError('min') && year.touched){
+            <p class?="error">El anio debe ser como minimo 1900</p>
+        }
+    </fieldset>
+
+    <button [disabled]="movieForm.invalid">Enviar</button>
+</form>
