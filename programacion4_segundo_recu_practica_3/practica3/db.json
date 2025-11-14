@@ -1,0 +1,18 @@
+{
+  "customers": [
+    {
+      "id": "285d",
+      "name": "Julian Alvarez",
+      "age": 70,
+      "mail": "pollitofrito@gmail.com",
+      "phoneNumber": "2234243322"
+    },
+    {
+      "id": "eb10",
+      "name": "maximo",
+      "age": 20,
+      "mail": "maximoandriola2017@gmail.com",
+      "phoneNumber": "2234243399"
+    }
+  ]
+}

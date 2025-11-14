@@ -1,0 +1,68 @@
+<div class="formContainer">
+    <h2>{{pageTitle}}</h2>
+
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <label [className]="name">Nombre:</label>
+            <input type="text" formControlName="name" id="name" placeholder="ej: Maximo">
+            @if (name?.touched) {
+                @if (name?.hasError("required")) {
+                    <p>El nombre es obligatorio</p>
+                }
+                @if (name?.hasError("minlength")) {
+                    <p>El nombre debe contener minimo 5 caracteres</p>
+                }
+                @if (name?.hasError("maxlength")) {
+                    <p>El nombre debe contener maximo 20 caracteres</p>
+                }
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="age">Edad:</label>
+            <input type="number" formControlName="age" id="age" placeholder="ej: 20">
+            @if (age?.touched) {
+                @if (age?.hasError("required")) {
+                    <p>La edad es obligatoria</p>
+                }
+                @if (age?.hasError("min")) {
+                    <p>La edad debe ser minimo 18</p>
+                }
+                @if (age?.hasError("max")) {
+                    <p>La edad debe ser maximo 100</p>
+                }
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="mail">Mail:</label>
+            <input type="email" formControlName="mail" id="mail" placeholder="ej: maixmoandriola2017@gmail.com">
+            @if (mail?.touched) {
+                @if (name?.hasError("required")) {
+                    <p>El mail es obligatorio</p>
+                }
+                @if (name?.hasError("email")) {
+                    <p>el formato debe ser example@example.com</p>
+                }
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="phoneNumber">Telefono:</label>
+            <input type="text" formControlName="phoneNumber" id="phoneNumber" placeholder="ej: 2234243399">
+            @if (phoneNumber?.touched) {
+                @if (phoneNumber?.hasError("required")) {
+                    <p>El telefono es obligatorio</p>
+                }
+                @if (phoneNumber?.hasError("minlength")) {
+                    <p>El telefono debe contener minimo 9 caracteres</p>
+                }
+                @if (phoneNumber?.hasError("maxlength")) {
+                    <p>El telefono debe contener maximo 12 caracteres</p>
+                }
+            }
+        </fieldset>
+
+        <button type="submit" [disabled]="customerForm.invalid">Enviar</button>
+    </form>
+</div>

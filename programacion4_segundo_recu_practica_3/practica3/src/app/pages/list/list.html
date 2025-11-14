@@ -1,0 +1,18 @@
+<div>
+    <input type="text" [(ngModel)]="filterText" placeholder="Filtrar por nombre" />
+</div>
+
+<ul>
+    @for (customer of getFilteredCustomers(); track customer.id) {
+        <li>
+            <h2>Nombre: {{customer.name}}</h2>
+            <div>
+                <button (click)="showDetails(customer.id)">details</button>
+                <button (click)="updateCustomer(customer.id)">update</button>
+                <button (click)="deleteCustomer(customer.id)">delete</button>
+            </div>
+        </li>
+    }
+
+    <p>se encontraron {{cant}} registros</p>
+</ul>

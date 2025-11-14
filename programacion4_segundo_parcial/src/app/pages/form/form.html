@@ -1,0 +1,53 @@
+<div class="form-container">
+    <h2>{{ pageTitle }}</h2>
+    
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <label [className]="nombre">Nombre:</label>
+            <input type="text" id="nombre" formControlName="nombre">
+            @if (nombre?.invalid && nombre?.touched) {
+                <p>Nombre invalido</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="empresa">Empresa:</label>
+            <input type="text" id="empresa" formControlName="empresa">
+            @if (empresa?.invalid && empresa?.touched) {
+                <p>Empresa invalida</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="email">Email:</label>
+            <input type="text" id="email" formControlName="email">
+            @if (email?.invalid && email?.touched) {
+                <p>Email invalido</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="telefono">Telefono:</label>
+            <input type="text" id="telefono" formControlName="telefono">
+            @if (telefono?.invalid && telefono?.touched) {
+                <p>Telefono invalido</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label [className]="comentarios">Comentarios:</label>
+            <input type="text" id="comentarios" formControlName="comentarios">
+            @if (comentarios?.invalid && comentarios?.touched) {
+                <p>Comentarios invalidos</p>
+            }
+        </fieldset>
+
+        <button type="submit" [disabled]="clientForm.invalid">
+            {{ isEditMode ? 'Actualizar' : 'Crear' }}
+        </button>
+        
+        <button type="button" (click)="router.navigate(['/list'])">
+            Cancelar
+        </button>
+    </form>
+</div>

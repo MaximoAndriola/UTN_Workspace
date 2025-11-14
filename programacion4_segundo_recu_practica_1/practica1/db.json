@@ -1,0 +1,25 @@
+{
+  "players": [
+    {
+      "name": "maximo",
+      "age": 50,
+      "dorsal": 9,
+      "team": "Atletico de Madrid",
+      "id": "f38f"
+    },
+    {
+      "id": "f00c",
+      "name": "maximo",
+      "age": 20,
+      "dorsal": 10,
+      "team": "Inter de Miami"
+    },
+    {
+      "name": "Messi",
+      "age": 30,
+      "dorsal": 10,
+      "team": "Inter de Miami",
+      "id": "b398"
+    }
+  ]
+}

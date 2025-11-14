@@ -1,0 +1,11 @@
+@if (customer) {
+    <div>
+        <h3>Nombre: {{customer.name}}</h3>
+        <h3>Edad: {{customer.age}}</h3>
+        <h3>Mail: {{customer.mail}}</h3>
+        <h3>Telefono: {{customer.phoneNumber}}</h3>
+
+    </div>
+}@else {
+    <p>no se pudo cargar el customer</p>
+}

@@ -1,0 +1,18 @@
+<ul>
+    <div>
+        <label>filtrar por:</label>
+        <input type="text" (input)="filterEmployees($event)">
+    </div>
+    @for (employee of employees; track $index) {
+        <li>
+            <p>Nombre: {{employee.name}}</p>
+            <div>
+                <button (click)="showDetails(employee.id)">details</button>
+                <button (click)="updateEmployee(employee.id)">edit</button>
+                <button (click)="deleteEmployee(employee.id)">delete</button>
+            </div>
+        </li>
+    }
+
+    <p>Cantidad de registros: {{cant}}</p>
+</ul>

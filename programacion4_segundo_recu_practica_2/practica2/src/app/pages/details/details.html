@@ -1,0 +1,10 @@
+@if (employee) {
+    <div>
+        <h3>Nombre: {{employee.name}}</h3>
+        <h3>Edad: {{employee.age}}</h3>
+        <h3>Mail: {{employee.mail}}</h3>
+        <h3>Telefono: {{employee.phoneNumber}}</h3>
+    </div>
+}@else {
+    <p>no se pudo cargar el empleado</p>
+}

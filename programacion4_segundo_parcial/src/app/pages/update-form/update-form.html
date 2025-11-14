@@ -1,0 +1,44 @@
+<form [formGroup]="updateForm" (ngSubmit)="updateClient()">
+    <fieldset>
+        <label [className]="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+        @if (nombre?.invalid && nombre?.touched) {
+            <p>Nombre invalido</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label [className]="empresa">Empresa:</label>
+        <input type="text" id="empresa">
+        @if (empresa?.invalid && empresa?.touched) {
+            <p>Empresa invalida</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label [className]="email">Email:</label>
+        <input type="text" id="email">
+        @if (email?.invalid && email?.touched) {
+            <p>Email invalido</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label [className]="telefono">Telefono:</label>
+        <input type="text" id="telefono">
+        @if (telefono?.invalid && telefono?.touched) {
+            <p>Telefono invalido</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label [className]="comentarios">Comentarios:</label>
+        <input type="text" id="comentarios">
+        @if (comentarios?.invalid && comentarios?.touched) {
+            <p>Comentarios invalidos</p>
+        }
+    </fieldset>
+
+    <button [disabled]="updateForm.invalid">Enviar</button>
+
+</form>

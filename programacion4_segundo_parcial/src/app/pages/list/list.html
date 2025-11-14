@@ -1,0 +1,8 @@
+<ul>
+    @for (client of clients; track $index) {
+        <li>nombre: {{client.nombre}}</li>
+        <button (click)="showDetails(client.id)">Show Details</button>
+        <button (click)="updateClient(client.id)">Update</button>
+        <button (click)="deleteClient(client.id)">Delete</button>
+    }
+</ul>
